@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>FINAL SPACE</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='./assets/css/style.css'>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src='.../assets/javascript/game.js'></script> 
+</head>
+<body>
+
+    <H1 class="main-title">FINAL SPACE</H1>
+
+    <div class="game-area">
+        <h2 class="step-1">choose your hero</h2>
+
+        <div class="mainChars" id="heros">
+
+            <div class="indChar restofChar" id="Mooncake">
+                <h2 class="char-name">Mooncake</h2>
+                <img src="/assets/images/thumbnail (3).jfif" alt="Mooncake-final-space">
+                <p class="char-hp">500</p>
+            </div>
+        
+            <div class="indChar restofChar" id="Lord Commander">
+                <h2 class="char-name">Lord-Commander</h2>
+                <img src="/assets/images/thumbnail (1).jfif" alt="lord-commander-final-space">
+                <p class="char-hp">500</p>
+            </div>
+            
+            <div class="indChar restofChar" id="Avocato">
+                <h2 class="char-name">Avocato</h2>
+                <img src="/assets/images/thumbnail (2).jfif" alt="Avocato-final-space">
+                <p class="char-hp">500</p>
+            </div>
+
+            <div class="indChar restofChar" id="Gary">
+                <h2 class="char-name">Gary</h2>
+                <img class="character-img" src="/assets/images/Gary-Final-Space.jpg" alt="Gary-Final-Space">
+                <p class="char-hp">500</p>
+            </div>
+           
+        </div>
+
+        <div class="player-char player-battle-zone">
+
+            <div class="hero-selected" id="player">
+                <h2 class="step-2">your hero</h2>
+            </div>
+
+            <div >
+                <h2 class="vrs">vs</h2>
+            </div>
+
+            <div class="enemy-selceted" id="computer">
+                <h2 class="step-2">enemy opponent</h2>
+            </div>
+
+        </div>
+
+        <div class="defenders" id="enemy-char"> </div>
+        
+    </div>
+
+    <script>
+
+        var attack;
+        var defend;
+        var heroChar;
+        var heroHP;
+        var heroPower;
+        var heroConAttk;
+        var enemyChar;
+        var enemyHP;
+        var enemyPower;
+        var enemyConAttk;
+        var name;
+
+
+        var otherChars = $(".restofChar")
+
+        $(".indChar").on("click",function(){
+            $("#player").append(this);
+            $("#enemy-char").append(otherChars);
+        });
+
+    </script>
+
+    
+
+</body>
+</html>
